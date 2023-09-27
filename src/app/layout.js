@@ -1,4 +1,4 @@
-
+import { ProviderAuth } from "@hooks/useAuth"
 import Header from "@components/Header"
 import Nav from "@common/Nav"
 import '@style/tailwind.css'
@@ -11,6 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
      <html lang="en">
+      <ProviderAuth>
       <body>
           <>
           <div className="main-h-full">
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
           </div>
           </>
       </body>
+      </ProviderAuth>
      </html>
    )
  }
